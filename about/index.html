@@ -474,11 +474,13 @@
         More: "More&#8230;"
     };
 
-    (function(d, s, a, b) { a = d.createElement(s);
+    (function(d, s, a, b) {
+        a = d.createElement(s);
         b = d.getElementsByTagName(s)[0];
         a.async = 1;
         a.src = "../../static.addtoany.com/menu/page.js";
-        b.parentNode.insertBefore(a, b); })(document, "script");
+        b.parentNode.insertBefore(a, b);
+    })(document, "script");
     </script>
     <script type="text/javascript" async defer data-pin-color="red" data-pin-height="28" data-pin-hover="true" src="../wp-content/plugins/pinterest-pin-it-button-on-image-hover-and-post/js/pinit.js"></script>
     <script>
@@ -522,104 +524,104 @@
     <script>
         var woof_ajaxurl = "../wp-admin/admin-ajax.html";
 
-	    var woof_lang = {
-		'orderby': "orderby",
-		'date': "date",
-		'perpage': "per page",
-		'pricerange': "price range",
-		'menu_order': "menu order",
-		'popularity': "popularity",
-		'rating': "rating",
-		'price': "price low to high",
-		'price-desc': "price high to low"
-	    };
+        var woof_lang = {
+        'orderby': "orderby",
+        'date': "date",
+        'perpage': "per page",
+        'pricerange': "price range",
+        'menu_order': "menu order",
+        'popularity': "popularity",
+        'rating': "rating",
+        'price': "price low to high",
+        'price-desc': "price high to low"
+        };
 
-	    if (typeof woof_lang_custom == 'undefined') {
-		var woof_lang_custom = {};/*!!important*/
-	    }
+        if (typeof woof_lang_custom == 'undefined') {
+        var woof_lang_custom = {};/*!!important*/
+        }
 
-	//***
+    //***
 
-	    var woof_is_mobile = 0;
-	
-
-
-	    var woof_show_price_search_button = 0;
-	    var woof_show_price_search_type = 0;
-	
-	    var woof_show_price_search_type = 1;
-
-	    var swoof_search_slug = "swoof";
-
-	
-	    var icheck_skin = {};
-		        icheck_skin = 'none';
-	
-	    var is_woof_use_chosen =1;
-
-	
-
-	    var woof_current_values = '[]';
-	//+++
-	    var woof_lang_loading = "Loading ...";
-
-	
-	    var woof_lang_show_products_filter = "show products filter";
-	    var woof_lang_hide_products_filter = "hide products filter";
-	    var woof_lang_pricerange = "price range";
-
-	//+++
-
-	    var woof_use_beauty_scroll =0;
-	//+++
-	    var woof_autosubmit =0;
-	    var woof_ajaxurl = "../wp-admin/admin-ajax.html";
-	    /*var woof_submit_link = "";*/
-	    var woof_is_ajax = 0;
-	    var woof_ajax_redraw = 0;
-	    var woof_ajax_page_num =1;
-	    var woof_ajax_first_done = false;
-	    var woof_checkboxes_slide_flag = true;
+        var woof_is_mobile = 0;
+    
 
 
-	//toggles
-	    var woof_toggle_type = "text";
+        var woof_show_price_search_button = 0;
+        var woof_show_price_search_type = 0;
+    
+        var woof_show_price_search_type = 1;
 
-	    var woof_toggle_closed_text = "-";
-	    var woof_toggle_opened_text = "+";
+        var swoof_search_slug = "swoof";
 
-	    var woof_toggle_closed_image = "../wp-content/plugins/woocommerce-products-filter/img/plus3.png";
-	    var woof_toggle_opened_image = "../wp-content/plugins/woocommerce-products-filter/img/minus3.png";
+    
+        var icheck_skin = {};
+                icheck_skin = 'none';
+    
+        var is_woof_use_chosen =1;
+
+    
+
+        var woof_current_values = '[]';
+    //+++
+        var woof_lang_loading = "Loading ...";
+
+    
+        var woof_lang_show_products_filter = "show products filter";
+        var woof_lang_hide_products_filter = "hide products filter";
+        var woof_lang_pricerange = "price range";
+
+    //+++
+
+        var woof_use_beauty_scroll =0;
+    //+++
+        var woof_autosubmit =0;
+        var woof_ajaxurl = "../wp-admin/admin-ajax.html";
+        /*var woof_submit_link = "";*/
+        var woof_is_ajax = 0;
+        var woof_ajax_redraw = 0;
+        var woof_ajax_page_num =1;
+        var woof_ajax_first_done = false;
+        var woof_checkboxes_slide_flag = true;
 
 
-	//indexes which can be displayed in red buttons panel
-		    var woof_accept_array = ["min_price", "orderby", "perpage", ,"product_visibility","product_cat","product_tag","pa_colour","pa_duration","pa_eyelet-choice","pa_heel-detail","pa_insole-size","pa_level","pa_shoe-upper-style","pa_size","pa_sole","pa_time","pa_toe-medallion","pa_uk-size","pa_variation"];
+    //toggles
+        var woof_toggle_type = "text";
 
-	
+        var woof_toggle_closed_text = "-";
+        var woof_toggle_opened_text = "+";
 
-
-	//***
-	//for extensions
-
-	    var woof_ext_init_functions = null;
-	
-
-	
-	    var woof_overlay_skin = "default";
+        var woof_toggle_closed_image = "../wp-content/plugins/woocommerce-products-filter/img/plus3.png";
+        var woof_toggle_opened_image = "../wp-content/plugins/woocommerce-products-filter/img/minus3.png";
 
 
-	    jQuery(function () {
-		woof_current_values = jQuery.parseJSON(woof_current_values);
-		if (woof_current_values==null ||woof_current_values.length == 0) {
-		    woof_current_values = {};
-		}
+    //indexes which can be displayed in red buttons panel
+            var woof_accept_array = ["min_price", "orderby", "perpage", ,"product_visibility","product_cat","product_tag","pa_colour","pa_duration","pa_eyelet-choice","pa_heel-detail","pa_insole-size","pa_level","pa_shoe-upper-style","pa_size","pa_sole","pa_time","pa_toe-medallion","pa_uk-size","pa_variation"];
 
-	    });
+    
 
-	    function woof_js_after_ajax_done() {
-		jQuery(document).trigger('woof_ajax_done');
-		    }
-	</script>
+
+    //***
+    //for extensions
+
+        var woof_ext_init_functions = null;
+    
+
+    
+        var woof_overlay_skin = "default";
+
+
+        jQuery(function () {
+        woof_current_values = jQuery.parseJSON(woof_current_values);
+        if (woof_current_values==null ||woof_current_values.length == 0) {
+            woof_current_values = {};
+        }
+
+        });
+
+        function woof_js_after_ajax_done() {
+        jQuery(document).trigger('woof_ajax_done');
+            }
+    </script>
     <script async src='../../stats.wp.com/s-201837.js'></script>
 </head>
 
@@ -628,9 +630,9 @@
         <header id="masthead" class="site-header" role="banner">
             <!-- style="background-image: url(#wp-content/uploads/2018/04/hero.jpg); " -->
             <!--div class="col-full">
-			<div class="col2-set col-1">COLUMN 1</div>
-			<div class="col2-set col-2">COLUMN 2</div>
-		</div-->
+            <div class="col2-set col-1">COLUMN 1</div>
+            <div class="col2-set col-2">COLUMN 2</div>
+        </div-->
             <div class="col-full">
                 <div class="col2-set col-1"> <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
                     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -640,18 +642,18 @@
                 </div>
                 <div class="storefront-primary-navigation col-2">
                     <div class="col-full">
-                        <ul id="site-header-cart" class="site-header-cart menu">
+                        <!-- <ul id="site-header-cart" class="site-header-cart menu">
                             <li class="">
                                 <a class="cart-contents" hreff="../#" title="View your shopping basket">
-				<span class="amount">&pound;0.00</span> <span class="count">0 items</span>
-			</a>
+                <span class="amount">&pound;0.00</span> <span class="count">0 items</span>
+            </a>
                             </li>
                             <li>
                                 <div class="widget woocommerce widget_shopping_cart">
                                     <div class="widget_shopping_cart_content"></div>
                                 </div>
                             </li>
-                        </ul>
+                        </ul> -->
                         <div id="my-account"><a hreff="" disabledtitle="Login / Register">Login / Register</a>| </div>
                         <div id="header-search-container">
                             <div class="aws-container" data-url="#" data-siteurl="https://www.carreducker.com" data-show-loader="true" data-show-more="false" data-show-page="true" data-use-analytics="false" data-min-chars="1">
@@ -708,16 +710,16 @@
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">
                         <!--div class="post-35 page type-page status-publish has-post-thumbnail hentry" style="background-image: url(#wp-content/uploads/2018/07/About-banner.jpg); " data-featured-image="">
-	<div class="col-full">
-				<header class="entry-header">
-			<h1 class="entry-title loaded">About</h1>
-		</header>
-	</div>
+    <div class="col-full">
+                <header class="entry-header">
+            <h1 class="entry-title loaded">About</h1>
+        </header>
+    </div>
 </div><!-- #post-## -->
                         <div class="wrap">
                             <!-- <nav>
-				
-		</nav> -->
+                
+        </nav> -->
                             <div>
                                 <h2>About Luminous spring </h2>
                                 <p>
@@ -745,11 +747,11 @@
             <h2>Get Inspired</h2>
             <p>Sign up to our newsletter and be the first to receive news about shoes and classes. When signing up, you accept our privacy policy terms.</p>
             <!--form action="https://carreducker.us1.list-manage.com/subscribe/post?u=1f79a98c8a2d033e8263ce102&amp;id=be8cca1f7a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			<input type="text" name="FNAME" class="" id="mce-FNAME" placeholder="First name" />
-			<input type="text" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address" />
-			<input type="submit" value="Subscribe"  name="subscribe" id="mc-embedded-subscribe" class="button"/>
-		</form>
-		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script-->
+            <input type="text" name="FNAME" class="" id="mce-FNAME" placeholder="First name" />
+            <input type="text" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address" />
+            <input type="submit" value="Subscribe"  name="subscribe" id="mc-embedded-subscribe" class="button"/>
+        </form>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script-->
             <!-- Begin MailChimp Signup Form -->
             <link href="../../cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
             <div id="mc_embed_signup">
@@ -762,9 +764,9 @@
                             <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First name">
                         </div>
                         <!--div class="mc-field-group">
-					<label for="mce-LNAME">Last Name </label>
-					<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-				</div-->
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                </div-->
                         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -776,7 +778,8 @@
             </div>
             <script type='text/javascript' src='../../s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
             <script type='text/javascript'>
-            (function($) { window.fnames = new Array();
+            (function($) {
+                window.fnames = new Array();
                 window.ftypes = new Array();
                 fnames[0] = 'EMAIL';
                 ftypes[0] = 'email';
@@ -787,7 +790,8 @@
                 fnames[3] = 'ADDRESS';
                 ftypes[3] = 'address';
                 fnames[4] = 'PHONE';
-                ftypes[4] = 'phone'; }(jQuery));
+                ftypes[4] = 'phone';
+            }(jQuery));
             var $mcj = jQuery.noConflict(true);
             </script>
             <!--End mc_embed_signup-->
@@ -804,12 +808,12 @@
                     </div>
                     Registered Address: Erbil, Iraq
                     <br />
-                    Contact us: <a href="mailto:info@luminouspring.com">info@luminouspring.com</a>
+                    Contact us: <a href="mailto:kanny.ahmadi@luminouspring.com">kanny.ahmadi@luminouspring.com</a>
                     <br />
                     <a hreff="../terms/index.html">Terms & Conditions</a> | Web Services By <a>Luminous</a>
                     <br />
                     <img id="cc" src="../wp-content/themes/carreducker/images/cc.png" />
-			</div>
+            </div>
                 </div><!-- .col-full -->
         </footer><!-- #colophon -->
     </div><!-- #page -->
@@ -954,8 +958,8 @@
         }
 
         /*if(  crumb_label == 'Courses' ){
-	    cat_name = 'Courses';
-	    slug = 'courses';
+        cat_name = 'Courses';
+        slug = 'courses';
     }*/
 
 
@@ -982,9 +986,9 @@
         }
 
         /*$( ".woocommerce-product-gallery__wrapper" ).find("img").each(function( index ) {
-	    $(".woocommerce-product-gallery ol img:nth-of-type("+ (index+1)).attr('alt', $( this ).attr('title')).parent().append('<div class="caption">'+$( this ).attr('title')+'</div>');
-	    
-	});*/
+        $(".woocommerce-product-gallery ol img:nth-of-type("+ (index+1)).attr('alt', $( this ).attr('title')).parent().append('<div class="caption">'+$( this ).attr('title')+'</div>');
+        
+    });*/
 
 
 
