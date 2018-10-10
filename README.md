@@ -1,1 +1,0 @@
-"# kanny-static" 
